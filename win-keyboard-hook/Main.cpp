@@ -59,22 +59,7 @@ LRESULT CALLBACK remapKeyboard(int nCode, WPARAM wParam, LPARAM lParam)
 			}
 		
 			break; // end of 'F'
-		
-		/*	
-		case WM_KEYUP:
-			character = MapVirtualKey(incomingVirtualKeyCode, MAPVK_VK_TO_CHAR);
-			std::cout << "scan code: " << incomingScanCode << " | raw vk code: " << incomingVirtualKeyCode << " | raw char: " << character << " | keyUP" << std::endl;
 
-			if (incomingVirtualKeyCode == 70) {
-				bRemapKey = true;
-				INPUT input;
-				input.type = INPUT_KEYBOARD;
-				input.ki.wVk = 84;
-				input.ki.dwFlags = KEYEVENTF_KEYUP;
-				vInputsToSend.push_back(input);
-			}
-			break;
-		*/
 	}
 
 	if (bRemapKey) {
@@ -134,7 +119,8 @@ LRESULT CALLBACK remapKeyboard(int nCode, WPARAM wParam, LPARAM lParam)
 
 int main()
 {
-	std::cout << "Hello World!" << std::endl;
+	std::cout << "Keyboard Layout Mapper" << std::endl;
+	std::cout << "running..." << std::endl;
 
 	keyboardHook = SetWindowsHookEx(WH_KEYBOARD_LL, &remapKeyboard, 0, 0);
 
