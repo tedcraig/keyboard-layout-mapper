@@ -1,6 +1,12 @@
 #ifndef VKCODE_H_
 #define VKCODE_H_
 
+// Virtual-Key Codes
+// hex values taken from:
+// https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+//
+// wanted my own constant labels rather than use the constants in Windows.h
+
 enum class VkCode {
 	MOUSE_LEFT_BUTTON	= 0x01,
 	MOUSE_RIGHT_BUTTON	= 0x02,
@@ -20,10 +26,10 @@ enum class VkCode {
 
 	ESCAPE				= 0x1B,
 
-	// CONVERT				= 0x1C,
-	// NONCONVERT			= 0x1D,
-	// ACCEPT				= 0x1E,
-	// MODECHANGE			= 0x1F,
+	CONVERT				= 0x1C,
+	NONCONVERT			= 0x1D,
+	ACCEPT				= 0x1E,
+	MODECHANGE			= 0x1F,
 
 	SPACE				= 0x20,
 
@@ -185,53 +191,6 @@ enum class VkCode {
 	LAUNCH_MEDIA_SELECT	= 0xB5,
 	LAUNCH_APP1			= 0xB6,
 	LAUNCH_APP2			= 0xB7,
-
-	F13					= 0x7C,
-	F14					= 0x7D,
-	F15					= 0x7E,
-	F16					= 0x7F,
-	F17					= 0x80,
-	F18					= 0x81,
-	F19					= 0x82,
-	F20					= 0x83,
-	F21					= 0x84,
-	F22					= 0x85,
-	F23					= 0x86,
-	F24					= 0x87,
-	
-	NUMLOCK				= 0x90,
-	SCROLLLOCK			= 0x91,
-	
-	APPS				= 0x5D,
-	SLEEP				= 0x5F,
-	
-	IME_KANA			= 0x15,
-	IME_HANGUL			= 0x15,
-	IME_ON				= 0x16,
-	IME_JUNJA			= 0x17,
-	IME_FINAL			= 0x18,
-	IME_HANJA			= 0x19,
-	IME_KANJI			= 0x19,
-	IME_OFF				= 0x1A,
-	
-	BROWSER_BACK		= 0xA6,
-	BROWSER_FORWARD		= 0xA7,
-	BROWSER_REFRESH		= 0xA8,
-	BROWSER_STOP		= 0xA9,
-	BROWSER_SEARCH		= 0xAA,
-	BROWSER_FAVORITES	= 0xAB,
-	BROWSER_HOME		= 0xAC,
-	VOLUME_MUTE			= 0xAD,
-	VOLUME_DOWN			= 0xAE,
-	VOLUME_UP			= 0xAF,
-	MEDIA_NEXT_TRACK	= 0xB0,
-	MEDIA_PREV_TRACK	= 0xB1,
-	MEDIA_STOP			= 0xB2,
-	MEDIA_PLAY_PAUSE	= 0xB3,
-	LAUNCH_MAIL			= 0xB4,
-	LAUNCH_MEDIA_SELECT	= 0xB5,
-	LAUNCH_APP1			= 0xB6,
-	LAUNCH_APP2			= 0xB7
 };
 
 #endif
